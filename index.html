@@ -8,12 +8,16 @@
 <body>
 	<h1>QR Scanner Test</h1>
 	<div id="reader"></div>
+	<h1>Result</h1>
+	<div id="result"></div>
 
 	<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 	<script>
 		function onScanSuccess(decodedText, decodedResult) {
 			// handle the scanned code as you like, for example:
 			console.log(`Code matched = ${decodedText}`, decodedResult);
+
+			document.getElementById("result").innerHTML = decodedText;
 		}
 
 		function onScanFailure(error) {
