@@ -25,6 +25,8 @@
 
 			document.getElementById("result").innerHTML = decodedText;
 			html5QrcodeScanner.stop();
+			// Try remove the element
+			document.getElementById("reader").remove();
 		}
 
 		function onScanFailure(error) {
